@@ -8,8 +8,7 @@ int main() {
 
     // This calculates the length of the message
     int messageLength = strlen(message);
-
-    // Check the length after removing the newline
+    
     if (messageLength <= 140) { // If or else statement that calculates whether the input satisfies.
         printf("Posted");
     } else {
