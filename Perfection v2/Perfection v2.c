@@ -9,7 +9,7 @@ int isPerfect(int num) {
         }
     }
     return (sum == num);
-}
+} 
 
 int main() {
     int num;
