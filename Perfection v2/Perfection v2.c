@@ -18,7 +18,7 @@ int main() {
     printf("Input number: ");
     scanf("%d", &num);
     
-    // Receives input and calculates if the given digit is perfect or not.
+    // Receives input and calculates if the given digit is perfect or not
     if (isPerfect(num)) {
         printf("Perfect Number.\n", num);
     } else {
