@@ -13,7 +13,7 @@ int main() {
     printf("\n" "Caught in a bad romance...");
     // Used a new line command to create spaces in between each songs' lyrics.
     printf("\n");
-    printf("\n" "Coming out of my cage");
+    printf("\n" "Coming out of my cage"); 
     printf("\n" "And I've been doing just fine");
     printf("\n" "Gotta gotta be down");
     printf("\n" "Because I want it all");
