@@ -15,4 +15,4 @@ int main() {
         printf("Rejected"); // Second half of If or else statement for a positive output.
     }
     return 0;
-}
+} 
