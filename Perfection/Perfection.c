@@ -7,7 +7,7 @@ int main() {
     printf("Input a number: ");
     scanf("%d", &num);
 
-    // Special case: 1 is not a perfect number
+    // Establish a special case where 1 is not a perfect number
     if (num <= 1) {
         printf("Not A Perfect Number.\n");
         return 0;
