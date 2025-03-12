@@ -1,22 +1,34 @@
 #include <stdio.h>
 
-int main() {
-    int windSpeed; // Establish variable for wind speed.
-    printf("Please input wind speed (MPH): "); // Create input box for user.
-    scanf("%d", &windSpeed); // Scans the input number to determine the output.
+// Function to classify the hurricane based on wind speed
+void classifyHurricane(int wind_speed) {
 
-    if (windSpeed < 74) { // If or else code which determines the category based on MPH given
-        printf("Not a hurricane \n");
-    } else if (windSpeed >= 74 && windSpeed <96) {
-        printf("Category One Hurricane \n"); 
-    } else if (windSpeed >= 96 && windSpeed <111) {
-        printf("Category Two Hurricane \n");
-    } else if (windSpeed >= 111 && windSpeed <130) {
-        printf("Category Three Hurricane \n");
-    } else if (windSpeed >= 130 && windSpeed <157) {
-        printf("Category Four Hurricane \n");
+// If or else code which determines the category based on MPH given
+    if (wind_speed >= 157) {
+        printf("Category 5 Hurricane\n");
+    } else if (wind_speed >= 130) {
+        printf("Category 4 Hurricane\n");
+    } else if (wind_speed >= 111) {
+        printf("Category 3 Hurricane\n");
+    } else if (wind_speed >= 96) {
+        printf("Category 2 Hurricane\n");
+    } else if (wind_speed >= 74) {
+        printf("Category 1 Hurricane\n");
     } else {
-        printf("Category Five Hurricane \n");
+        printf("Not a hurricane\n");
     }
+}
+
+int main() {
+    // Declare a variable (the previously established variable) to store the wind speed
+    int wind_speed;
+
+    // Prompt the user for the wind speed input
+    printf("Please input wind speed (MPH): ");
+    scanf("%d", &wind_speed);
+
+    // Classify the hurricane with the function
+    classifyHurricane(wind_speed);
+
     return 0;
 }
