@@ -31,7 +31,7 @@ int main() {
                 found = 1;
                 
                 // Prompt for the sale amount
-                printf("Enter the sale amount for %s: ", salesperson_initials[i]);
+                printf("Enter the sale amount for %c: ", salesperson_initials[i]);
                 scanf("%d", &saleAmount);
                 
                 // Update the grand total
@@ -58,7 +58,7 @@ int main() {
     
     // Display the highest salesperson
     if (highestSalespersonIndex != -1) {
-        printf("Highest Sale: %s (%c) with $%d\n", salesperson_initials[highestSalespersonIndex], salesperson_initials[highestSalespersonIndex], highestSale);
+        printf("Highest Sale: %c (%c) with $%d\n", salesperson_initials[highestSalespersonIndex], salesperson_initials[highestSalespersonIndex], highestSale);
     } else {
         printf("No valid sales data entered.\n");
     }
