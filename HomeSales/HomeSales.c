@@ -5,7 +5,7 @@
             char salesperson; 
             int saleAmount;
             int grandTotal = 0;
-            int highestSale = 0;
+            int highestSale = 0; 
             char highestSalesperson;
         
             // Create a loop to collect the sales data
