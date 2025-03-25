@@ -66,7 +66,7 @@ int main() {
     // Output each salesperson's accumulated sales
     printf("\nSales Summary:\n");
     for (int i = 0; i < NUM_SALESPERSONS; i++) {
-        printf("%s (%c): $%d\n", salesperson_initials[i], sales[i]);
+        printf("%c (%c): $%d\n", salesperson_initials[i], sales[i]);
     }
 
     return 0;
