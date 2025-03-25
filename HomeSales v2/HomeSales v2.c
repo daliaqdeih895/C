@@ -63,6 +63,6 @@ int main() {
     } else {
         printf("No valid sales data entered.\n");
     }
-
+ 
     return 0;
 }
