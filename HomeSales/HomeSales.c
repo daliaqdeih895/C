@@ -2,7 +2,7 @@
 
     int main() {
             // Create variables and initialize the sale and total variables
-            char salesperson;
+            char salesperson; 
             int saleAmount;
             int grandTotal = 0;
             int highestSale = 0;
