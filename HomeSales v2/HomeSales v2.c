@@ -19,7 +19,8 @@ int main() {
         // Prompt the user for the salesperson initial
         printf("Enter salesperson initial (D, E, or F) or Z to quit: ");
         scanf(" %c", &salesperson);
-         // If the user entered 'Z', break the loop. This allows for multiple tests without overarching data
+        
+        // If the user entered 'Z', break the loop. This allows for multiple tests without overarching data
         if (salesperson == 'Z') {
             break;
         }
@@ -31,14 +32,14 @@ int main() {
                 found = 1;
                 
                 // Prompt for the sale amount
-                printf("Enter the sale amount for %c: ", salesperson_initials[i]);
+                printf("Enter the sale amount: ");
                 scanf("%d", &saleAmount);
                 
                 // Update the grand total
                 sales[i] += saleAmount;
                 grandTotal += saleAmount;
                 
-               // Calculates the highest sale amount
+                // Calculates the highest sale amount
                 if (sales[i] > highestSale) {
                     highestSale = sales[i];
                     highestSalespersonIndex = i;
@@ -49,7 +50,7 @@ int main() {
 
         // If the entered initial is invalid, show an error message
         if (!found) {
-            printf("Error: Invalid salesperson selected. Please try again.\n");
+            printf("Error, invalid salesperson selected, please try again.\n");
         }
     }
 
@@ -58,15 +59,9 @@ int main() {
     
     // Display the highest salesperson
     if (highestSalespersonIndex != -1) {
-        printf("Highest Sale: %c (%c) with $%d\n", salesperson_initials[highestSalespersonIndex], salesperson_initials[highestSalespersonIndex], highestSale);
+        printf("Highest Sale: %c\n", salesperson_initials[highestSalespersonIndex]);
     } else {
         printf("No valid sales data entered.\n");
-    }
-
-    // Output each salesperson's accumulated sales
-    printf("\nSales Summary:\n");
-    for (int i = 0; i < NUM_SALESPERSONS; i++) {
-        printf("%c (%c): $%d\n", salesperson_initials[i], sales[i]);
     }
 
     return 0;
