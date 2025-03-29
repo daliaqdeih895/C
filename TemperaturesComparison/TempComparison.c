@@ -20,7 +20,7 @@ int main() {
             scanf("%d", &temp);
 
             if (temp < MIN_TEMP || temp > MAX_TEMP) {
-                printf("Invalid temperature! Please enter a temperature between %d and %d.\n", MIN_TEMP, MAX_TEMP);
+                printf("Temperature is invalid, Please enter a valid temperature between %d and %d.\n", MIN_TEMP, MAX_TEMP);
             }
         } while (temp < MIN_TEMP || temp > MAX_TEMP);
         
