@@ -47,10 +47,15 @@ int main() {
     }
 
     // Display the temperatures in the order entered
-    printf("5-Day Temperature: ");
+    printf("5-Day Temperature [");
     for (i = 0; i < NUM_TEMPS; i++) {
-        printf("%d ", temps[i]);
+        printf("%d", temps[i]);
+        if (i < NUM_TEMPS - 1) { 
+            printf(", ");
+        }
     }
+    printf("]\n");
+    
     printf("\n");
 
     // Calculate the average temperature
