@@ -1,20 +1,21 @@
 #include <stdio.h>
-
+// Determine the range of -30 to 130
 #define NUM_TEMPS 5
 #define MIN_TEMP -30
 #define MAX_TEMP 130
 
-int main() {
+int main() { 
+    // Set up variables for determining the temperature trends
     int temps[NUM_TEMPS];
     int i;
     int isWarmer = 1, isCooler = 1;
     int sum = 0;
 
-    // Input five daily temperatures
+    // Create a spot for inputting 5 temperatures
     for (i = 0; i < NUM_TEMPS; i++) {
         int temp;
         
-        // Input a temperature within the valid range
+        // Input box for entering a temperature (within the valid range)
         do {
             printf("Input Temperature: ", i + 1, MIN_TEMP, MAX_TEMP);
             scanf("%d", &temp);
@@ -27,7 +28,7 @@ int main() {
         temps[i] = temp;
         sum += temp;
         
-        // Check if the temperatures are getting warmer or cooler
+        // Check if the temperatures are getting warmer or cooler using the variables
         if (i > 0) {
             if (temps[i] > temps[i - 1]) {
                 isCooler = 0;
@@ -37,7 +38,7 @@ int main() {
         }
     }
 
-    // Determine the temperature trend
+    // Determine the temperature trend with the variables established
     if (isWarmer) {
         printf("Getting warmer\n");
     } else if (isCooler) {
@@ -55,12 +56,10 @@ int main() {
         }
     }
     printf("]\n");
-    
-    printf("\n");
 
     // Calculate the average temperature
     double average = (double)sum / NUM_TEMPS;
-    printf("Average temperature is %.2f\n degrees", average);
+    printf("Average temperature is %.2f degrees", average);
 
     return 0;
 }
