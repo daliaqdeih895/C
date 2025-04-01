@@ -4,7 +4,8 @@
 void cipherMessage(char *text, int shift) { // Declare the function as a Cipher message
     int i;
     char ch;
-    
+
+    // Reduce shift to a number within 0-25 (because there are 26 letters)
     shift = shift % 26;
     
     printf("Text: %s\n", text);
@@ -14,6 +15,9 @@ void cipherMessage(char *text, int shift) { // Declare the function as a Cipher 
     printf("Cipher: ");
     for(i = 0; text[i] != '\0'; i++) {
         ch = text[i];
+        
+        // Debugging: Show each character before shift
+        printf("Original char: %c (ASCII: %d) ", ch, ch);
         
         // Check if the character is an uppercase letter
         if(ch >= 'A' && ch <= 'Z') {
@@ -26,6 +30,9 @@ void cipherMessage(char *text, int shift) { // Declare the function as a Cipher 
             ch = ((ch - 'a' + shift) % 26) + 'a';
         }
         
+        // Debugging: Show the shifted character
+        printf("-> Shifted char: %c (ASCII: %d)\n", ch, ch);
+        
         // Print the shifted character(s)
         printf("%c", ch);
     }
@@ -35,7 +42,7 @@ void cipherMessage(char *text, int shift) { // Declare the function as a Cipher 
 int main() {
     char text[100];
     int shift;
-    
+
     // Read input string
     printf("Input: ");
     fgets(text, sizeof(text), stdin);
@@ -44,9 +51,9 @@ int main() {
     // Read shift value
     printf("Shift: ");
     scanf("%d", &shift);
-    
+
     // Call the cipher function
     cipherMessage(text, shift);
-    
+
     return 0;
 }
