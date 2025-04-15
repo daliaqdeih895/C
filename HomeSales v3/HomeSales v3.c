@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// Define a struct that contaisn the data for each salesperson
+// Define a struct that contains the data for each salesperson
 typedef struct {
     char initial;        // Initial of the salesperson
     char name[50];       // Full name of the salesperson
