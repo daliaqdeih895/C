@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// Define a struct for Salesperson
+// Define a struct that contaisn the data for each salesperson
 typedef struct {
     char initial;        // Initial of the salesperson
     char name[50];       // Full name of the salesperson
@@ -22,12 +22,12 @@ int main() {
 
     // Create a loop to collect the sales data
     while (1) {
-        // Prompt the user for the salesperson initial
+        // Prompt for the salesperson initial
         printf("Enter salesperson initial (D, E, or F) or Z to quit: ");
         char salespersonInitial;
         scanf(" %c", &salespersonInitial);
 
-        // If the user entered 'Z', break the loop.
+        // Enter 'Z', break the loop and gather data
         if (salespersonInitial == 'Z') {
             break;
         }
@@ -41,7 +41,7 @@ int main() {
             }
         }
 
-        // If the entered initial is invalid, show an error message
+        // Show an error message for when the initial is invalid
         if (currentSalesperson == NULL) {
             printf("Error: Invalid salesperson selected, please try again.\n");
             continue;
@@ -70,12 +70,6 @@ int main() {
     
     // Display the highest salesperson
     printf("Highest Sale: %c\n", highestSalespersonInitial);
-
-    // Display the sales information for each salesperson
-    printf("\nSalesperson Totals:\n");
-    for (int i = 0; i < 3; i++) {
-        printf("%s (Initial: %c) Total Sales: %d\n", salespeople[i].name, salespeople[i].initial, salespeople[i].totalSales);
-    }
 
     return 0;
 }
